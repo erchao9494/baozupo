@@ -38,6 +38,6 @@
         url:'/addition'
         ,templateUrl:'views/addition.html'
       })
-      $urlRouterProvider.otherwise("/mainpath")
+      $urlRouterProvider.otherwise("/mainpath/homepage")
   }])
 
