@@ -1,1 +1,197 @@
 /*赵万宝--请大家注意 css 命名,加上前缀*/
+.smt_zhu{
+	float: left;
+	width: 100%;
+	height: 620px;
+	background: #F5F5F5;
+}
+
+.smt_zhu1{
+	width: 1100px;
+	height: 580px;
+	margin: 20px auto;
+}
+
+.smt_left{
+	float: left;
+	width: 800px;
+	height: 580px;
+}
+
+.smt_top{
+	width: 800px;
+	height: 200px;
+	background: #fff;
+}
+
+.smt_tubiao{
+	float: left;
+	width: 800px;
+	height: 370px;
+	margin-top: 30px;
+	background: #fff;
+}
+.smt_tubiao1{
+	width: 800px;
+	height: 360px;
+	margin-top: 20px;
+}
+.chart{
+	float: left;
+	margin-left: 5px;
+}
+
+
+.smt_right{
+	float: right;
+	width: 280px;
+	height: 590px;
+	background: #fff;
+}
+
+.smt_rili {
+	overflow: hidden;
+	background: #fff;
+	padding-bottom: 50px;
+	width: 250px;
+	height: 230px;
+	margin: 10px auto;
+}
+.smt_rili h3{
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 17px;
+	color: red;
+}
+.smt_rili ul:nth-child(2) li{
+	width: 14%;
+	float: left;
+	text-align: center;
+	padding: 10px 0;
+}
+.smt_rili ul:nth-child(3) li{
+	width: 14%;
+	float: left;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+}
+.smt_rili ul:nth-child(3) li:nth-child(1){
+	display: none;
+}
+.smt_rili ul:nth-child(3) li:nth-child(2){
+	margin-left: 28%;
+}
+
+
+/**************手风琴***********/
+
+.smt_shou{
+	width: 260px;
+	margin: 20px auto;
+	height: 319px;
+	overflow: auto;
+}
+.smt_shou>h1{
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.smt_shou::-webkit-scrollbar {
+   width: 0.2em;
+}
+
+.smt_shou::-webkit-scrollbar:horizontal 
+{
+   height: 0.2em;
+}
+
+.accordion {
+ 	width: 100%;
+ 	max-width: 360px;
+ 	background: #2d2c41;
+ 	-webkit-border-radius: 4px;
+ 	-moz-border-radius: 4px;
+ 	border-radius: 4px;
+ }
+
+.accordion .link {
+	cursor: pointer;
+	display: block;
+	padding: 15px 15px 15px 42px;
+	color: #4D4D4D;
+	font-size: 14px;
+	font-weight: 700;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+	border-bottom: 0;
+}
+
+.accordion li i {
+	position: absolute;
+	top: 16px;
+	left: 12px;
+	font-size: 18px;
+	color: #595959;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+	right: 12px;
+	left: auto;
+	font-size: 16px;
+}
+
+.accordion li.open .link {
+	color: #b63b4d;
+}
+
+.accordion li.open i {
+	color: #b63b4d;
+}
+.accordion li.open i.fa-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+ .submenu {
+ 	display: none;
+ 	background: #444359;
+ 	font-size: 14px;
+ }
+
+ .submenu li {
+ 	border-bottom: 1px solid #4b4a5e;
+ }
+
+ .submenu a {
+ 	display: block;
+ 	text-decoration: none;
+ 	color: #d9d9d9;
+ 	padding: 12px;
+ 	padding-left: 42px;
+ 	-webkit-transition: all 0.25s ease;
+ 	-o-transition: all 0.25s ease;
+ 	transition: all 0.25s ease;
+ }
+
+ .submenu a:hover {
+ 	background: #b63b4d;
+ 	color: #FFF;
+ }

@@ -8,14 +8,14 @@
  *
  * Main module of the application.
  */
-  angular.module('yeomanApp', ['ui.router'])
+  angular.module('yeomanApp', ['ui.router','chart.js'])
   .config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
       $stateProvider.state("mainpath",{
         url:'/mainpath'
         ,templateUrl:'views/mainpath.html'
       }).state("mainpath.homepage",{
         //首页赵万宝
-        url:'/homepage'
+        url:'/homepage/{uid}'
         ,templateUrl:'views/homepage.html'
       }).state("mainpath.particulars",{
         //客户详情程璐宇
@@ -37,7 +37,15 @@
         //添加李志锴
         url:'/addition'
         ,templateUrl:'views/addition.html'
+      }).state("login",{
+        //登陆
+        url:'/login'
+        ,templateUrl:'views/login.html'
+      }).state("register",{
+        //注册
+        url:'/register'
+        ,templateUrl:'views/register.html'
       })
-      $urlRouterProvider.otherwise("/mainpath/homepage")
+      $urlRouterProvider.otherwise("/login")
   }])
 
