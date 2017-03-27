@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-  angular.module('yeomanApp', ['ui.router'])
+  angular.module('yeomanApp', ['ui.router','chart.js'])
   .config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
       $stateProvider.state("mainpath",{
         url:'/mainpath'
