@@ -1,3 +1,132 @@
-<div ng-controller="particulars">
-2
+<div ng-controller="particulars" class="fangchan">
+	<h1>房产管理</h1>
+	
+	<!--上导航-->
+  <div class="cly">
+  	 <nav>
+  	 	<ul class="cly_left">
+  	 		<li>
+  	 			<a href="">
+  	 				<img src="images/cly_left.png" alt="" />
+  	 			</a>
+  	 		</li>
+  	 		<li>
+  	 			8888888房号(0/1)
+  	 		</li>
+  	 		<li class="right">
+  	 			<a href="">
+  	 				<img src="images/cly_right.png" alt="" />
+  	 			</a>
+  	 		</li>
+  	 	</ul>
+  	 	<ul class="cly_right">
+  	 		<li>
+  	 			<a href="">
+  	 				+添加房产
+  	 			</a>
+  	 		</li>
+  	 		<li>
+  	 			<a href="">
+  	 				房号排序
+  	 			</a>
+  	 		</li>
+  	 	</ul>
+  	 </nav>
+  	 
+  	  <!--功能区-->
+  	  
+  	  <div class="cly_zhu clear">
+
+  	  	 <div class="left">
+  	  	 	<img src="images/cly_img1.png" alt="" />
+  	  	 </div>
+  	  	 <div class="left">
+  	  	 	 <p>88888房产</p>
+  	  	 	 <ul>
+  	  	 	 	<li>共<span>2</span>套</li>
+  	  	 	 	<li>闲置<span>2</span>套</li>
+  	  	 	 </ul>
+  	  	 </div>
+  	  	 <div class="left">
+  	  	 	<ul>
+  	  	 		<li ng-click="add()">
+  	  	 			+添加房号
+  	  	 		</li>
+  	  	 		<li>
+  	  	 			房号排序
+  	  	 		</li>
+  	  	 		<li>
+  	  	 			更多
+  	  	 		</li>
+  	  	 	</ul>
+  	  	 </div>
+  	  	
+  	  </div>
+      <!--添加区-->
+      
+      <div class="cly_zhi">
+      	<ul>
+      		
+      		<li class="digua" ng-repeat="i in arr">
+      			<a href="javascript:;">  
+      				<div>{{i.fangjianhao}}</div>
+      				 <div>
+      				 	<img src="images/cly_img2.png" alt="" />
+      				 </div>
+      				 <span>闲置</span>
+      			</a>
+      		</li>
+      		
+      		<!--<li><a href=""></a></li>
+      		<li><a href=""></a></li>
+      		<li><a href=""></a></li>
+      		<li><a href=""></a></li>
+      		<li><a href=""></a></li>-->
+      	</ul>
+      </div>
+  </div>
+  
+   <!--浮成-->
+   
+   <div class="zwb_bigbox" ng-show="fuceng1"></div>
+	<div class="zwb_bigbox1" ng-show="fuceng2"></div>
+	<div class="zwb_baocun" ng-show="chenggong"><span class="glyphicon glyphicon-ok"></span>保存成功</div>
+	<div class="zwb_fanghao" ng-show="fanghao">
+		<div class="clear">
+			添加新房号<span class="right" ng-click="tab()">×</span>
+		</div>
+		<div class="clear">
+			<span class="left">房号</span>
+			<input type="text" class="left" placeholder="例如：001" ng-model="fangjianhao"/>
+		</div>
+		<div class="clear" ng-click="tab3()">
+			<span class="left">照片</span>
+			<div class="clear left">
+				<i>+</i>
+				<span>0张</span>
+			</div>
+		</div>
+		<div>
+			<input type="button" value="取消" ng-click="tab1()" />
+			<input type="button" value="保存" ng-click="tab2()"  />
+		</div>
+		<p ng-hide="qingshuru">请输入房号</p>
+	</div>
+	<!--上传图片-->
+	<div class="zwb_sctp" ng-show="sctp">
+		<div class="clear">
+			上传图片<span class="right" ng-click="tab4()">×</span>
+		</div>
+		<div>
+			<div>
+				<i>+</i>
+				<span>照片</span>
+			</div>
+			<p>建议图片小于4MB</p>
+		</div>
+		<div>
+			<button>完成</button>
+		</div>
+	</div>
+
 </div>
