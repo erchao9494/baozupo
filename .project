@@ -1,42 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< HEAD
-	<name>guanjia</name>
-=======
-	<name>smt_xiang</name>
->>>>>>> origin/master
+	<name>alallal</name>
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
 		<buildCommand>
-<<<<<<< HEAD
-			<name>com.aptana.editor.php.aptanaPhpBuilder</name>
+			<name>com.aptana.ide.core.unifiedBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-=======
->>>>>>> origin/master
-			<name>com.aptana.ide.core.unifiedBuilder</name>
+			<name>com.pandora.projects.ui.MKeyBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>com.pandora.projects.ui.MKeyNature</nature>
 		<nature>com.aptana.projects.webnature</nature>
-<<<<<<< HEAD
-		<nature>com.aptana.editor.php.phpNature</nature>
+		<nature>org.nodeclipse.ui.NodeNature</nature>
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
+		<nature>tern.eclipse.ide.core.ternnature</nature>
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1490582063930</id>
-=======
-	</natures>
-	<filteredResources>
-		<filter>
-			<id>1490616149259</id>
->>>>>>> origin/master
+			<id>0</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
