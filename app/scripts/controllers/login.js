@@ -7,8 +7,8 @@ angular.module('yeomanApp')
       $scope.username = '';
       $scope.password = '';
       $scope.innText = '';
-      if(localStorage.user != ''||localStorage.user != undefined){
-        $scope.username = localStorage.user;
+      if(sessionStorage.user != ''||sessionStorage.user != undefined){
+        $scope.username = sessionStorage.user;
       }
       $(document).keydown(function(e){
         var e = e||window.event;

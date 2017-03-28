@@ -28,7 +28,7 @@ angular.module('yeomanApp')
               ,name:$scope.rname
             }
           }).then(function(reqs){
-            localStorage.user = $scope.username;
+            sessionStorage.user = $scope.username;
             $state.go('login');
           },function(error){
             if(error.status==400){
