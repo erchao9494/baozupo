@@ -1,3 +1,119 @@
-<div ng-controller="homepage">
-5
+<div ng-controller="homepage" class="smt_zhu">
+   <div class="smt_zhu1">
+   	<div class="smt_left">
+		<div class="smt_top">
+			<input type="submit"  id="btn" value="到期房" class="btn btn-info" style="width: 180px; height: 180px; float: left; margin-left: 20px; margin-top: 10px;"/>
+			<input type="submit"  id="btn" value="闲置房" class="btn btn-success" style="width: 180px; height: 180px; float: left; margin-left: 110px; margin-top: 10px;"/>
+			<input type="submit"  id="btn" value="租客房" class="btn btn-danger" style="width: 180px; height: 180px; float: left; margin-left: 110px; margin-top: 10px;"/>
+			
+			<div class="smt_tubiao">
+				<div class="smt_tubiao1">
+					<canvas class="chart chart-line" chart-data="data"  chart-labels="labels" chart-legend="true" chart-series="series" width="800" height="360"></canvas>
+				</div>
+				
+			</div>
+		</div>   		
+   	</div>	
+   
+   <div class="smt_right">
+   		<div class="smt_rili">
+		<h3 id="nowTime"></h3>
+		<ul class="zwb_xinqi">
+			<li>一</li>
+			<li>二</li>
+			<li>三</li>
+			<li>四</li>
+			<li>五</li>
+			<li>六</li>
+			<li>日</li>
+		</ul>
+		<ul>
+			<li ng-repeat="i in arr" ng-bind="i"></li>
+		</ul>
+	</div>
+	
+	
+	 <!--
+  	作者：1550296923@qq.com
+  	时间：2017-03-27
+  	描述：手风琴
+  -->
+  
+  <div class="smt_shou">
+  	<h1>备忘录</h1>
+  	<ul id="accordion" class="accordion">
+		<li>
+			<div class="link"><i class="fa fa-paint-brush"></i>加工覅偶然吗<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu" ng-repear='as in ad'>
+				<li><a href="#">改后天就哈珀今天富婆如果给好看头发从屏幕那个覅偶人玫瑰穷人的你过来人坑了人的 内容康复快点 光荣的</a></li>
+			</ul>
+		</li>
+		<li>
+			<div class="link"><i class="fa fa-code"></i>Desarrollo front-end<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">改后天就哈珀今天富婆如果给好看头发从屏幕那个覅偶人玫瑰穷人的你过来人坑了人的 内容康复快点 光荣的</a></li>
+			</ul>
+		</li>
+		<li>
+			<div class="link"><i class="fa fa-mobile"></i>Diseño responsive<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">改后天就哈珀今天富婆如果给好看头发从屏幕那个覅偶人玫瑰穷人的你过来人坑了人的 内容康复快点 光荣的</a></li>
+			</ul>
+		</li>
+		<li><div class="link"><i class="fa fa-globe"></i>Posicionamiento web<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+
+				<li><a href="#">改后天就哈珀今天富婆如果给好看头发从屏幕那个覅偶人玫瑰穷人的你过来人坑了人的 内容康复快点 光荣的</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+  	<!--
+      	作者：1550296923@qq.com
+      	时间：2017-03-27
+      	描述：模态框
+      -->
+      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left: 60px; margin-top: 10px; width: 120px;">
+	                          添加备忘录
+      </button>
+      
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					备忘录标题:
+					<div class="form-group">
+    <input type="text" class="form-control" id="name" placeholder="备忘录标题" style="margin-top:20px;" ng-model="qw">
+  </div>
+				</h4>
+			</div>
+			<div class="modal-body">
+				    备忘录内容
+				    <div class="form-group">
+    <textarea class="form-control" rows="3" style="margin-top: 20px;" ng-model="qr"></textarea>
+  </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button type="button" class="btn btn-primary" ng-click="fn()" data-dismiss="modal">
+					提交
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+      
+  	
+  </div>
+	
+	
+	
+	
+   </div>
+   </div>
 </div>

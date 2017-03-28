@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+<<<<<<< HEAD
+	<name>guanjia</name>
+=======
+	<name>smt_xiang</name>
+>>>>>>> origin/master
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+<<<<<<< HEAD
+			<name>com.aptana.editor.php.aptanaPhpBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+=======
+>>>>>>> origin/master
+			<name>com.aptana.ide.core.unifiedBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.aptana.projects.webnature</nature>
+<<<<<<< HEAD
+		<nature>com.aptana.editor.php.phpNature</nature>
+	</natures>
+	<filteredResources>
+		<filter>
+			<id>1490582063930</id>
+=======
+	</natures>
+	<filteredResources>
+		<filter>
+			<id>1490616149259</id>
+>>>>>>> origin/master
+			<name></name>
+			<type>26</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-node_modules</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
+</projectDescription>
