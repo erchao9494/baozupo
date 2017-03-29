@@ -70,9 +70,8 @@
   -->
   
   <div class="smt_shou">
-  	<h1>备忘录</h1>
-  	<table class="table table-striped table-bordered table-hover">
-  			<th style="text-align: center; width: 100%;">标题</th>
+  	<table class="table table-striped table-bordered table-hover asd">
+  			<th style="text-align: center; width: 100%;">备忘录</th>
   		<tr ng-repeat="af in ar" style="cursor: pointer;">
   			<td >
   				<!--
@@ -80,7 +79,7 @@
                   	时间：2017-03-28
                   	描述：
                   -->
-  			  <span ng-click="dian(af.id)" data-toggle="modal" data-target="#myModal2" class="smt_zi">{{af.biaoti}}</span>  <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="width: 50px; font-size: 12px; text-align: center; float: right;">
+  			  <span ng-click="dian(af.id)" data-toggle="modal" data-target="#myModal2" class="smt_zi">{{af.biaoti}}</span>  <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="width: 258px; font-size: 12px; text-align: center; position: absolute; left: 0px; top: 283px;" >
 	                          添加
       </button>
       <div class="modal fade" id="myModalts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -163,13 +162,17 @@
 					<div class="form-group">
     <input type="text" class="form-control" id="name" placeholder="备忘录标题" style="margin-top:20px;" ng-model="qw">
   </div>
-				</h4>
+  备忘录时间:
+  <div class="form-group">
+    <input type="text" class="form-control workinput wicon mr25 time" id="inpstart" readonly ng-model="fg">
+  </div>
+			</h4> 
 			</div>
 			<div class="modal-body">
 				    备忘录内容
 				    <div class="form-group">
-    <textarea class="form-control" rows="3" style="margin-top: 20px;" ng-model="qr"></textarea>
-  </div>
+        <textarea class="form-control" rows="3" style="margin-top: 20px;" ng-model="qr"></textarea>
+      </div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
@@ -201,7 +204,9 @@
 					备忘录标题:
 					<div class="form-group">
     <input type="text" class="form-control" id="name" placeholder="备忘录标题" style="margin-top:20px;" ng-model="qt">
-    <div class="shijian" style="float: right; color: orangered;">{{qu}}</div>
+    <div class="shijian" style="float: right; color: orangered;">
+    	{{qu | date:'yyyy年MM月dd日 hh:mm:ss'}}
+    </div>
   </div>
 				</h4>
 			</div>
@@ -209,7 +214,7 @@
 				    备忘录内容
 				    <div class="form-group">
     <textarea class="form-control" rows="3" style="margin-top: 20px;" ng-model="qy"></textarea>
-    <div class="shijian" style="float: right; color: orangered;">{{qu}}</div>
+    <div class="shijian" style="float: right; color: orangered;">{{qu | date:'yyyy年MM月dd日 hh:mm:ss'}}</div>
   </div>
 			</div>
 		</div>

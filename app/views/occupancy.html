@@ -1,3 +1,4 @@
+
 <div ng-controller="occupancy" class="zwb_box">
 	<h1>到期提醒</h1>
 	<div class="zwb_main">
@@ -26,3 +27,42 @@
 		</div>
 	</div>
 </div>
+
+<div ng-controller="occupancy" class="xwk_occupancy">
+	<ul class="xwk_subnav">
+		<li>
+			<a href="javascript:;" ui-sref="mainpath.homepage">首页</a>
+		</li>
+		<li style="color: #CDCDCD;">
+			>
+		</li>
+		<li>
+			<a href="javascript:;">账户资料</a>
+		</li>
+	</ul>
+
+	<div class="xwk_mylist">
+		<div class="xwk_head">
+		</div>
+		<p>
+			<span>修改昵称</span>
+			<input type="text" name="name" ng-model="name">
+		</p>
+		<p>
+			<span>请输入新的密码：</span>
+			<input type="password" class="form-control " placeholder="密码由字母和数字组成" ng-model="x_password" ng-blur="xwk_xg()">
+			<i ng-show="xwk_t">{{xwk_title}}</i>
+		</p>
+		<p>
+			<span>请再次输入密码：</span>
+			<input type="password" class="form-control " placeholder="确保两次输入完全一致" ng-model="xwk_password" ng-blur="xwk_xgs()">
+			<i ng-show="xwk_ts">{{xwk_titles}}</i>
+		</p>
+		<p ng-show="xwk_tsk">修改成功</p>
+		<p>
+			<button type="button" class="btn btn-primary" ng-click="xwk_sub()">提交更改</button>
+		</p>
+
+	</div>
+</div>
+

@@ -29,23 +29,30 @@ angular.module('yeomanApp')
 
 		//备忘录后台数据
 		$scope.fn = function(){
-			
+		//alert(localStorage.startTimer)
+		var time = $('.time').val()
+		//alert(time)
 			$http({
 				url: 'http://47.88.16.225:408/title',
 				method: 'post',
 				data: {
 					biaoti: $scope.qw,
 					neirong: $scope.qr,
-					time:current()
+					time: time
 					
 				}
 			}).then(function(r) {
 				$scope.ar = r.data;
 				location.reload('')
+				localStorage.clear();
+
 			}, function() {
 				alert("数据请求失败")
 			})
-
+			
+			
+			//倒计时
+			
 		}
 		
 		//获取备忘录数据
@@ -72,7 +79,7 @@ angular.module('yeomanApp')
 
 				console.log(r)
 
-                	$scope.qt = r.data.biaoti
+                	$scope.qt = r.data.biaoti  
 				    $scope.qy= r.data.neirong
 
 			}, function() {
@@ -181,8 +188,68 @@ angular.module('yeomanApp')
             }
         }
  
+
         // html += '</tbody></table>';
         // document.getElementById("Container").innerHTML = html;
+
+//      html += '</tbody></table>';
+//      document.getElementById("Container").innerHTML = html;
+
     }
+    
+    
+    
+    //input时间框
+    
+    var end = {
+			format: 'YYYY年MM月DD日 hh:mm:ss',
+			minDate: $.nowDate(0), //设定最小日期为当前日期
+			festival: true,
+			maxDate: '2099-06-16 23:59:59', //最大日期
+			choosefun: function(elem, datas) {
+				end.minDate = datas; //开始日选好后，重置结束日的最小日期
+				function getDate(strDate) {
+					var date = eval('new Date(' + strDate.replace(/\d+(?=-[^-]+$)/,
+						function(a) {
+							return parseInt(a, 10) - 1;
+						}).match(/\d+/g) + ')');
+					return date;
+				};
+			}
+
+		};
+    
+    var start = {
+			format: 'YYYY年MM月DD日 hh:mm:ss',
+			minDate: $.nowDate(0), //设定最小日期为当前日期
+			isinitVal: true,
+			
+			maxDate: '2099-06-30 23:59:59', //最大日期
+			choosefun: function(elem, datas) {
+				end.minDate = datas; //开始日选好后，重置结束日的最小日期
+				function getDate(strDate) {
+					var date = eval('new Date(' + strDate.replace(/\d+(?=-[^-]+$)/,
+						function(a) {
+							return parseInt(a, 10) - 1;
+						}).match(/\d+/g) + ')');
+					return date;
+				};
+//				//转化成时间戳
+//				var date = getDate(datas);
+//				date = new Date(date);
+//				window.localStorage.startTimer = date.valueOf()
+			}
+	
+		};
+		
+		$('#inpstart').jeDate(start);
+		
+		$('#inpend').jeDate(end);
+
+
+		//倒计时
+		
+		
+
 
 	}])
