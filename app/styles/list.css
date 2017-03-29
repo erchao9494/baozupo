@@ -5,6 +5,7 @@
 	background: #F2F2F2;
 	height: 100vh;
 	overflow: hidden;
+	background: #FFFFFF;
 	font-family: "微软雅黑";
 }
 
@@ -165,6 +166,10 @@
 	width: 400px;
 	height: 546px;
 	position: relative;
+.xwk_bj {
+	width: 400px;
+	height: 546px;
+	position: absolute;
 	top: 5%;
 	left: 50%;
 	margin-left: -200px;
@@ -176,6 +181,7 @@
 select,
 input {
 	-font-family: "微软雅黑";
+	display: none;
 }
 
 .xwk_div {
@@ -310,6 +316,14 @@ input {
 	margin-top: 3px;
 }
 
+.xwk_address select{
+	width: 94px;
+	float: left;
+	height: 30px;
+	margin-top: 3px;
+	margin-left: 5px;
+	text-align: center;
+}
 .xwk_start {
 	width: 100%;
 	height: 36px;
@@ -442,4 +456,15 @@ input {
 	border-top: 1px solid #999999;
 	text-align: center;
 	line-height: 65px;
+}
+
+.xwk_bigbox {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, .5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
 }
