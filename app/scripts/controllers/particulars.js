@@ -2,7 +2,7 @@
  * Created by 李志锴 on 2017/3/18.
  */
 angular.module('yeomanApp')
-	.controller('particulars', ['$scope', '$http', '$timeout', '$state', '$stateParams', function($scope, $http, $timeout, $state, $stateParams) {
+	.controller('particulars', ['$scope', '$http', '$timeout', '$state', '$stateParams', '$interval', function($scope, $http, $timeout, $state, $stateParams, $interval) {
 		//程璐宇
 
 		//初始化
@@ -18,6 +18,14 @@ angular.module('yeomanApp')
 
 		$scope.chenggong = false;
 		$scope.xianshi = false;
+
+//		$scope.date = (new Date()).getDate();
+		$scope.time = (new Date()).getTime();
+		$interval(function() {
+			$scope.time = new Date().getTime();
+//			$scope.date = (new Date()).getDate();
+		}, 1000);
+		
 
 		$scope.del = function(idd, index) {
 			console.log(idd)
@@ -63,19 +71,26 @@ angular.module('yeomanApp')
 			//		  修改房间号
 			$scope.tab6 = function() {
 				console.log(id.fangjianhao)
-				      	$http({
-								url: 'http://47.88.16.225:408/room/' + id.id,
-								method: 'put',
-								params:{
-									fangjianhao:$scope.fangjianhao
-								}
-				
-							}).then(function(data) {
-							
-								console.log(data)
-							}, function(error) {
-								alert('error')
-							})
+				$http({
+					url: 'http://47.88.16.225:408/room/' + id.id,
+					method: 'put',
+					data: {
+						fangjianhao: $scope.fangzi
+					}
+
+				}).then(function(data) {
+					$scope.fangjianhao = data.data.fangjianhao
+					$scope.chenggong = true;
+					$timeout(function() {
+						$scope.fanghao = false;
+						$scope.fuceng1 = false;
+						$scope.chenggong = false;
+						$scope.xgfh = false;
+					}, 1000)
+					console.log(data.data)
+				}, function(error) {
+					alert('error')
+				})
 
 			}
 		}
@@ -92,14 +107,13 @@ angular.module('yeomanApp')
 		}
 
 		//	修改/删除
-		$scope.add1 = function() {
+		$scope.add1 = function($index) {
 
 			if($scope.xianshi == false) {
 				$scope.xianshi = true
 			} else {
 				$scope.xianshi = false;
 			}
-
 		}
 
 		//×号
@@ -154,17 +168,33 @@ angular.module('yeomanApp')
 
 		//保存
 		$scope.arr = [];
+		$scope.off = false;
 		$scope.tab2 = function() {
-
+			console.log($scope.arr)
 			if($scope.fangjianhao == "") {
 				$scope.qingshuru = false;
+				$scope.xiangtong = true;
 			} else {
+				for(var i = 0; i < $scope.arr.length; i++) {
+					if($scope.arr[i].fangjianhao == $scope.fangjianhao) {
+						$scope.xiangtong = false;
+						$scope.qingshuru = true;
+						$scope.off = false;
+						return
+					} else {
+						$scope.off = true;
+					}
+				}
+			}
+
+			if($scope.off) {
 				$scope.qingshuru = true;
 				$http({
 					url: 'http://47.88.16.225:408/room',
 					method: 'post',
 					data: {
-						fangjianhao: $scope.fangjianhao
+						fangjianhao: $scope.fangjianhao,
+						zhuangtai:'false'
 					}
 				}).then(
 					function(data) {
