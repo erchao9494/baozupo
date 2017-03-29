@@ -29,7 +29,7 @@ angular.module('yeomanApp')
 
 		//备忘录后台数据
 		$scope.fn = function(){
-			
+
 			$http({
 				url: 'http://47.88.16.225:408/title',
 				method: 'post',
@@ -37,7 +37,6 @@ angular.module('yeomanApp')
 					biaoti: $scope.qw,
 					neirong: $scope.qr,
 					time:current()
-					
 				}
 			}).then(function(r) {
 				$scope.ar = r.data;
@@ -47,7 +46,7 @@ angular.module('yeomanApp')
 			})
 
 		}
-		
+
 		//获取备忘录数据
 		$http({
 				url: 'http://47.88.16.225:408/title',
@@ -62,13 +61,13 @@ angular.module('yeomanApp')
 			}, function() {
 				alert("数据请求失败")
 			})
-			
+
 			$scope.dian = function(id){
 				console.log(id)
 				$http({
 				url: 'http://47.88.16.225:408/title/'+id,
 				method: 'get'
-			}).then(function(r) { 
+			}).then(function(r) {
 
 				console.log(r)
 
@@ -79,10 +78,10 @@ angular.module('yeomanApp')
 				alert("数据请求失败")
 			})
 			}
-			
+
 
 		//删除备忘录数据
-		
+
 		$scope.fn1 = function(id){
 //			console.log(id)
 			$http({
@@ -95,16 +94,16 @@ angular.module('yeomanApp')
 			}, function() {
 				alert("数据请求失败")
 			})
-			
+
 		}
 
-		
+
 		// 当前时间
 		function current() {
 			var d = new Date(),
 				str = '';
-			str += d.getFullYear() + '年'; //获取当前年份 
-			str += d.getMonth() + 1 + '月'; //获取当前月份（0——11） 
+			str += d.getFullYear() + '年'; //获取当前年份
+			str += d.getMonth() + 1 + '月'; //获取当前月份（0——11）
 
 			if(d.getDate() < 10) {
 				str += '0' + d.getDate() + '日';
@@ -131,27 +130,27 @@ angular.module('yeomanApp')
 			return str;
 		}
 		setInterval(function() { $("#nowTime").html(current) }, 1000);
-		
-		
+
+
 		//日历
-		
+
 		setInterval(function(){
     	calendar()
     },1000)
-    
+
     function calendar() {
         var today = new Date();
- 
+
         var year = today.getFullYear();      //本年
         var month = today.getMonth() + 1;    //本月
         var day = today.getDate();           //本日
- 
+
         //本月第一天是星期几（距星期日离开的天数）
         var startDay = new Date(year, month - 1, 1).getDay();
- 
+
         //本月有多少天(即最后一天的getDate()，但是最后一天不知道，我们可以用“上个月的0来表示本月的最后一天”)
         var nDays = new Date(year, month, 0).getDate();
- 
+
         //开始画日历
         var numRow = 0;  //记录行的个数，到达7的时候创建tr
         var i;        //日期
@@ -180,7 +179,7 @@ angular.module('yeomanApp')
                 html += '</tr><tr>';
             }
         }
- 
+
         html += '</tbody></table>';
         document.getElementById("Container").innerHTML = html;
     }

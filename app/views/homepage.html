@@ -1,27 +1,27 @@
 <div ng-controller="homepage" class="smt_zhu">
-	
+
 	 <div class="fakeloader"></div>
-	
+
    <div class="smt_zhu1">
    	<div class="smt_left">
 		<div class="smt_top">
 			<input type="submit"  id="btn" value="到期房" class="btn btn-info" style="width: 120px; height: 120px; float: left; margin-left: 40px; margin-top: 10px; background: url(../images/cly_img1.png) no-repeat; background-size:100% 100%; font-size: 15px; font-weight: bold; color: #8C8C8C;"/>
 			<input type="submit"  id="btn" value="闲置房" class="btn btn-success" style="width: 120px; height: 120px; float: left; margin-left: 180px; margin-top: 10px; background: url(../images/cly_img1.png) no-repeat; background-size:100% 100%; font-size: 15px; font-weight: bold; color: #8C8C8C;"/>
 			<input type="submit"  id="btn" value="租客房" class="btn btn-danger" style="width: 120px; height: 120px; float: left; margin-left: 180px; margin-top: 10px; background: url(../images/cly_img1.png) no-repeat; background-size:100% 100%; font-size: 15px; font-weight: bold; color: #8C8C8C;"/>
-			
+
 			<div class="smt_tubiao">
 				<div class="smt_tubiao1">
 					<canvas class="chart chart-line" chart-data="data"  chart-labels="labels" chart-legend="true" chart-series="series" width="800" height="360"></canvas>
 				</div>
-				
+
 			</div>
-		</div>   		
-   	</div>	
-   
+		</div>
+   	</div>
+
    <div class="smt_right">
    		<div class="smt_rili">
 		<h3 id="nowTime"></h3>
-		
+
 		<table id="Calendar" width="212" style="float: left; margin-left: 25px; margin-top: 10px; height: 200px;">
         <tr>
             <td height="21" bgcolor="#78b3ed" width="212">
@@ -61,18 +61,19 @@
         </tr>
    </table>
 	</div>
-	
-	
+
+
 	 <!--
   	作者：1550296923@qq.com
   	时间：2017-03-27
   	描述：biaoge
   -->
-  
-  <div class="smt_shou">
-  	<h1>备忘录</h1>
+
+  <div class="smt_shou" style="position:relative;border:1px solid #ccc;">
+  	<!--<h1></h1>-->
   	<table class="table table-striped table-bordered table-hover">
-  			<th style="text-align: center; width: 100%;">标题</th>
+  			<th style="text-align: center; width: 100%;">备忘录</th>
+
   		<tr ng-repeat="af in ar" style="cursor: pointer;">
   			<td >
   				<!--
@@ -80,9 +81,8 @@
                   	时间：2017-03-28
                   	描述：
                   -->
-  			  <span ng-click="dian(af.id)" data-toggle="modal" data-target="#myModal2" class="smt_zi">{{af.biaoti}}</span>  <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="width: 50px; font-size: 12px; text-align: center; float: right;">
-	                          添加
-      </button>
+  			  <span ng-click="dian(af.id)" data-toggle="modal" data-target="#myModal2" class="smt_zi">{{af.biaoti}}</span>
+
       <div class="modal fade" id="myModalts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -112,7 +112,7 @@
 <button class="btn btn-danger" data-toggle="modal" data-target="#myModal1" style="width: 50px; font-size: 12px; text-align: center; float: right; margin-right: 5px;">
 	                         删除
       </button>
-      
+
       <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -124,7 +124,7 @@
 					是否删除？
 				</h4>
 			</div>
-			
+
 			<div class="modal-footer" style="border: none;">
 				<button type="button" class="btn btn-default" data-dismiss="modal"  data-target="#myModal1">取消
 				</button>
@@ -135,17 +135,21 @@
 		</div>
 	</div>
 </div>
-      
-  			</td>
-  			
-  		</tr>
-  		
-  	</table>
-  	
-  	
 
-  	
-	
+  			</td>
+
+  		</tr>
+
+        <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal" style="border-radius:0px;position:absolute;bottom:0px;left:0px;font-size: 12px;text-align: center;">
+          添加
+        </button>
+
+  	</table>
+
+
+
+
+
   	<!--
       	作者：1550296923@qq.com
       	时间：2017-03-27
@@ -201,7 +205,7 @@
 					备忘录标题:
 					<div class="form-group">
     <input type="text" class="form-control" id="name" placeholder="备忘录标题" style="margin-top:20px;" ng-model="qt">
-    <div class="shijian" style="float: right; color: orangered;">{{qu}}</div>
+    <!--<div class="shijian" style="float: right; color: orangered;">{{qu|date}}</div>-->
   </div>
 				</h4>
 			</div>
@@ -209,7 +213,7 @@
 				    备忘录内容
 				    <div class="form-group">
     <textarea class="form-control" rows="3" style="margin-top: 20px;" ng-model="qy"></textarea>
-    <div class="shijian" style="float: right; color: orangered;">{{qu}}</div>
+    <div class="shijian" style="float: right; color: orangered;">{{qu|date:'yyyy-MM-dd HH:mm:ss'}}</div>
   </div>
 			</div>
 		</div>
@@ -221,10 +225,10 @@
 
 
   </div>
-	
-	
-	
-	
+
+
+
+
    </div>
    </div>
 </div>
