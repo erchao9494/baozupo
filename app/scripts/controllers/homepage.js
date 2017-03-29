@@ -181,8 +181,8 @@ angular.module('yeomanApp')
             }
         }
  
-        html += '</tbody></table>';
-        document.getElementById("Container").innerHTML = html;
+        // html += '</tbody></table>';
+        // document.getElementById("Container").innerHTML = html;
     }
 
 	}])

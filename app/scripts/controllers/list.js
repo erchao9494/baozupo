@@ -43,8 +43,7 @@ angular.module('yeomanApp')
 
 		};
 		//console.log(start)
-			}
-		};
+			
 		var end = {
 			format: 'YYYY年MM月DD日 hh:mm:ss',
 			minDate: $.nowDate(0), //设定最小日期为当前日期
