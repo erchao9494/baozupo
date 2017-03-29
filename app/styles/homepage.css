@@ -113,6 +113,8 @@
 	margin: 20px auto;
 	height: 319px;
 	overflow: auto;
+	border: 1px solid #ccc;
+	position: relative;
 }
 
 .smt_shou>h1 {
