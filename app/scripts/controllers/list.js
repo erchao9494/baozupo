@@ -2,7 +2,7 @@
  * Created by 李志锴 on 2017/3/18.
  */
 angular.module('yeomanApp')
-	.controller('list', ['$scope', '$interval', function($scope, $interval) {
+	.controller('list', ['$scope', '$interval','$stateParams', function($scope, $interval,$stateParams) {
 		//薛文凯
 		$scope.show = false;
 		$scope.shu = 0;
@@ -17,6 +17,16 @@ angular.module('yeomanApp')
 		$scope.fn1 = function() {
 			$scope.shu += 1
 		}
+		
+		$http({
+			url: 'http://47.88.16.225:408/room' + $stateParams.uid,
+			method: 'get',
+			
+		}).then(function(data){
+			console.log(data.data)
+		},function(error){
+			alert('error')
+		})
 
 		var start = {
 			format: 'YYYY年MM月DD日 hh:mm:ss',
