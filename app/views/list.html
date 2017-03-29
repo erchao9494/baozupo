@@ -1,7 +1,7 @@
 <div ng-controller="list" class="xwk_main">
 	<ul class="xwk_nav">
 		<li>
-			<a href="javascript:;">房产管理</a>
+			<a href="javascript:;" ui-sref="mainpath.particulars">房产管理</a>
 		</li>
 		<li style="color: #CDCDCD;">
 			>
@@ -10,6 +10,7 @@
 			<a href="javascript:;">租客管理</a>
 		</li>
 	</ul>
+	<!--导航-->
 
 	<div class="xwk_adduser">
 		<div class="xwk_list">
@@ -19,59 +20,69 @@
 				</div>
 				<div class="xwk_roomstyle">这是房型</div>
 			</div>
-			<button ng-click="bbb()" class="xwk_btn btn btn-outline btn-info"><!--ng-click="add()--><i class="glyphicon glyphicon-plus"></i>添加租客</button>
-			<button class="xwk_back btn btn-outline btn-danger"><i class="glyphicon glyphicon-share-alt"></i>返回</button>
+			<button ng-click="list()" class="xwk_btn btn btn-outline btn-info"><i class="glyphicon glyphicon-plus"></i>添加租客</button>
+			<button class="xwk_back btn btn-outline btn-danger" ui-sref="mainpath.particulars"><i class="glyphicon glyphicon-share-alt"></i>返回</button>
 		</div>
+		<!--子导航-->
+
+		<div class="xwk_usermain">
+			<p>
+				<i class="glyphicon glyphicon-user"></i>
+				<a href="javascript:;" title="点击查看住户详情">
+					<i class="glyphicon glyphicon-info-sign"></i>
+				</a>
+			</p>
+			<ul>
+				<li>&nbsp;姓&nbsp;-&nbsp;名：&nbsp;<span></span></li>
+				<li>联系电话：<span></span></li>
+				<li>起租日期：<span></span></li>
+				<li>到租日期：<span></span></li>
+				<li>入住人数：<span></span></li>
+			</ul>
+			<div>
+				<button class="btn btn-info btn-outline">修改</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button class="btn btn-danger btn-outline">删除</button>
+			</div>
+		</div>
+		<!--添加成功后显示的住户信息-->
+
 
 		<div class="xwk_hint">
 			<p><i class="glyphicon glyphicon-home"></i></p>
 			<p>暂无租客入住。。。</p>
 			<p>点击“添加租客”录入租客信息，快速管理入住情况</p>
 		</div>
-
-		<!--<div data-role="controlgroup" id="select_p_c_a" data-ajax="false">
-			<select id="select_province"></select>
-			<select id="select_city"></select>
-			<select id="select_area"></select>
-		</div>-->
+		<!--未添加住户之前显示的提示信息-->
 	</div>
 
-	<!--浮层-->
-	<div class="xwk_bj"> <!--ng-show="show"-->
-		<div class="xwk_div">
-			<p>添加租客</p><span><i class="glyphicon glyphicon-remove" ng-click="back()"></i></span>
-		</div>
-		<div class="xwk_form">
-			<p class="xwk_name"><span>租客姓名</span><input type="text" placeholder="" style="text-indent: 15px;" class="form-control"></p>
-			<p class="xwk_tel"><span>租客电话</span><input type="text" placeholder="" style="text-indent: 15px;" class="form-control"></p>
-			<p class="xwk_tels"><span>身份证号</span><input type="text" placeholder="" style="text-indent: 15px;" class="form-control"></p>
-			<p data-role="controlgroup" id="select_p_c_a" data-ajax="false" class="xwk_address">
-				<span>户籍所在地</span>
-				<select id="select_province" class="form-control"></select>
-				<select id="select_city" class="form-control"></select>
-				<select id="select_area" class="form-control"></select>
-			</p>
-			<p class="xwk_start"><span>起租日期</span><input type="text" style="text-indent: 15px;" class="form-control workinput wicon mr25" id="inpstart" readonly></p>
-			<p class="xwk_end"><span>到租日期</span><input type="text" style="text-indent: 15px;" class="form-control workinput wicon mr25" id="inpend" readonly placeholder="点击获取日历"></p>
-			<p class="xwk_peoplenum">
-				<span class="xwk_span">人数</span>
-				<input type="button" ng-click=fn() class="btn btn-info" value="--" style="margin-left: 30px;width: 35px;height: 35px;" />
-				<span>{{shu}}</span>
-				<input type="button" ng-click=fn1() class="btn btn-info" value="+" style="width: 35px;height: 35px;" />
-			</p>
-			<div class="xwk_bar">
-				<span>备注</span>
-				<textarea rows="5" cols="35" style="text-indent: 25px;"></textarea>
+	<div class="xwk_bigbox">
+		<form class="xwk_bj">
+			<div class="xwk_div">
+				<p>添加租客</p><span><i class="glyphicon glyphicon-remove" ng-click="back()"></i></span>
 			</div>
+			<div class="xwk_form">
+				<p class="xwk_name"><span>租客姓名</span><input type="text" ng-model="xingming" placeholder="请输入真实姓名" class="form-control" required="required"></p>
+				<p class="xwk_tel"><span>租客电话</span><input type="text" ng-model="lianxidianhua" placeholder="请输入正确的手机号码" class="form-control" required="required"></p>
+				<p class="xwk_tels"><span>身份证号</span><input type="text" ng-model="shenfenzhenghao" placeholder="请输入正确的身份证号码" class="form-control" required="required"></p>
+				<p class="xwk_address"><span>户籍所在地</span><input type="text" ng-model="juzhudi" placeholder="请输入户籍所在地" class="form-control" required="required"></p>
+				<p class="xwk_start"><span>起租日期</span><input type="text" ng-model="ruzhushijian" class="form-control workinput wicon mr25" id="inpstart" readonly placeholder="点击获取日期"></p>
+				<p class="xwk_end"><span>到租日期</span><input type="text" ng-model="daoqishijian" class="form-control workinput wicon mr25" id="inpend" readonly placeholder="点击获取日期"></p>
+				<p class="xwk_peoplenum">
+					<span class="xwk_span">人数</span>
+					<input type="button" ng-click=fn() class="btn btn-info" value="--" style="margin-left: 30px;width: 35px;height: 35px;" />
+					<span ng-model="renshu">{{shu}}</span>
+					<input type="button" ng-click=fn1() class="btn btn-info" value="+" style="width: 35px;height: 35px;" />
+				</p>
+				<div class="xwk_bar">
+					<span>备注</span>
+					<textarea rows="5" cols="35" ng-model="neirong" style="text-indent: 25px;"></textarea>
+				</div>
 
-		</div>
-		<div class="xwk_next">
-			<button class="btn btn-info">下一步</button>
-		</div>
+			</div>
+			<div class="xwk_next">
+				<button class="btn btn-info" ng-click="next()">下一步</button>
+			</div>
+		</form>
 	</div>
-
-	<div class="xwk_bigbox" ng-show="show"></div>
+	<!--浮层-->
 </div>
-<script>
-	region_init("select_province", "select_city", "select_area");
-</script>
