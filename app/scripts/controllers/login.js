@@ -36,7 +36,8 @@ angular.module('yeomanApp')
               ,password:$scope.password
             }
           }).then(function(reqs){
-            $state.go('mainpath.homepage',{uid:reqs.data.uid})
+          	console.log(reqs)
+           $state.go('mainpath.homepage',{uid:reqs.data.uid})
           },function(error){
             $('#myModal').modal('show');
             $scope.innText = '登陆失败';
