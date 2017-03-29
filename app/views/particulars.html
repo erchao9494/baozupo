@@ -19,17 +19,15 @@
 					</a>
 				</li>
 			</ul>
-			<ul class="cly_right">
+			<ul class="cly_right" >
 				<li>
-					<a href="" style="text-decoration:none">
-						+添加房产
+					
+					<a href="" style="text-decoration:none;margin:0 auto;" ng-bind="time | date:'yyyy-MM-dd HH:mm:ss'">
+						
+						
 					</a>
 				</li>
-				<li>
-					<a href="" style="text-decoration:none">
-						更多
-					</a>
-				</li>
+				
 			</ul>
 		</nav>
 
@@ -55,7 +53,7 @@
 					<li ng-model="gengduo" ng-click='paixu()'>
 						房号排序
 					</li>
-					<input ng-model="js" style="margin-top:3px; border-radius:6px;">
+					<input ng-model="js" style="margin-top:3px; border-radius:6px;outline: none;">
 						<li>
 							搜索房间号（及关键字）
 						</li>
@@ -71,7 +69,7 @@
 				<li class="digua" ng-repeat="i in arr | filter:js | orderBy:gengduo | myfilter:currentpage*listpage | limitTo:listpage">
 					<a href="javascript:;">
 						<div>{{i.fangjianhao}}
-							  <div class="glyphicon glyphicon-chevron-down right zhankai" ng-click="add1();">
+							  <div class="glyphicon glyphicon-chevron-down right zhankai" ng-click="add1(i.$index);">
 							  	  <ul ng-show="xianshi">
 							  	  	<li ng-click="xiugai(i)">修改</li>
 							  	  	<li ng-click="del(i.id,$index)">删除</li>
@@ -164,9 +162,9 @@
 		</div>
 	</div>
 	<!--分页-->
-		<div class="xwk_page" style="margin：0 auto;width:100%;text-align: center;">
-			<button class="btn btn-primary xwk_left" ng-click="prev()">上一页</button>
-			<span class="xwk_span">{{page}}</span>
-			<button class="btn btn-danger xwk_right" ng-click="next()">下一页</button>
+		<div class="xwk_page" style="margin：0 auto;width:100%;text-align: center;" ng-show="arr.length>10?true:false">
+			<button class="btn btn-primary xwk_left" ng-click="prev()" style="outline:none;">上一页</button>
+			<span class="xwk_span" style="padding:0 20px;font-size:16px;">{{page}}</span>
+			<button class="btn btn-danger xwk_right" ng-click="next()" style="outline:none;">下一页</button>
 		</div>
 </div>
