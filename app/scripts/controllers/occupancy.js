@@ -2,10 +2,6 @@
  * Created by 李志锴 on 2017/3/18.
  */
 angular.module('yeomanApp')
-
-	.controller('occupancy', ['$scope', '$http', function($scope, $http) {
-		
-
 	.controller('occupancy', ['$scope', '$stateParams', '$http', '$timeout', function($scope, $stateParams, $http, $timeout) {
 		$http({
 			url: 'http://47.88.16.225:408/users/' + $stateParams.uid,
@@ -15,7 +11,7 @@ angular.module('yeomanApp')
 		}, function() {
 
 		})
-		 
+
 		$scope.xwk_t = false
 		$scope.xwk_title = "密码格式错误"
 		$scope.xwk_ts = false
@@ -67,6 +63,5 @@ angular.module('yeomanApp')
 				$scope.xwk_ts = true
 			}
 		}
-
 
 	}])
