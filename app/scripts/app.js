@@ -11,15 +11,15 @@
   angular.module('yeomanApp', ['ui.router','chart.js'])
   .config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
       $stateProvider.state("mainpath",{
-        url:'/mainpath'
+        url:'/mainpath/{uid}'
         ,templateUrl:'views/mainpath.html'
       }).state("mainpath.homepage",{
         //首页赵万宝
-        url:'/homepage/{uid}'
+        url:'/homepage'
         ,templateUrl:'views/homepage.html'
       }).state("mainpath.particulars",{
         //客户详情程璐宇
-        url:'/particulars'
+        url:'/particulars/{id}/{uid}'
         ,templateUrl:'views/particulars.html'
       }).state("mainpath.list",{
         //客户列表薛文凯
