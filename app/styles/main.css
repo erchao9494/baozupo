@@ -146,21 +146,51 @@ mark { background: #ff0; }
   zoom:1;
 }
 .lzk_header{
-  height:40px;
+  height:60px;
   width:100%;
   background:url(../images/header_bj.jpg);
+  background-size: 100% 100%;
 }
 .lzk_logo{
-  width:80px;
-  height:20px;
-  margin:10px 0 0 20px;
-  background:red;
+  width:55px;
+  height:50px;
+  margin-left:55px;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+.lzk_logo img{
+  width:80%;
+  height:80%;
+  display: block;
 }
 .lzk_username{
   width:114px;
   height:20px;
-  background:blue;
-  margin:10px 20px 0 0;
+  margin:22px 20px 0 0;
+}
+.lzk_username span{
+  float:right;
+  height:20px;
+  line-height:20px;
+  font-size:12px;
+  color:white;
+  padding-right:20px;
+  width:70px;
+  overflow: hidden;
+  text-align:left;
+}
+.lzk_username .lzk_username_img{
+   width:20px;
+   height:20px;
+   float:left;
+   display:inline;
+   border-radius:50%;
+  overflow: hidden;
+ }
+.lzk_username .lzk_username_img img{
+  width:100%;
+  height:100%;
+  float:left;
 }
 .lzk_main{
   width:100%;

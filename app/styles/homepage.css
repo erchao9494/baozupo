@@ -1,4 +1,4 @@
-/*赵万宝--请大家注意 css 命名,加上前缀*/
+﻿/*赵万宝--请大家注意 css 命名,加上前缀*/
 
 .smt_zhu {
 	float: left;
@@ -20,9 +20,58 @@
 }
 
 .smt_top {
+	float: left;
 	width: 800px;
-	height: 150px;
+	/*height: 80px;*/
 	background: #fff;
+	overflow: hidden;
+	padding:20px 0;
+
+}
+
+
+.smt_tiao{
+	float: left;
+	width: 120px;
+	height: 60px;
+	background: #00A1CB;
+	cursor: pointer;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+	margin-left: 10px;
+	/*margin-top: 10px;*/
+	border-radius:4px;
+	opacity:.7;
+}
+.smt_tiao1{
+	float: left;
+	width: 120px;
+	height: 60px;
+	background: green;
+	cursor: pointer;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+	margin-left: 210px;
+	/*margin-top: 10px;*/
+	border-radius:4px;
+	opacity:.7;
+}
+
+.smt_tiao2{
+	float: left;
+	width: 120px;
+	height: 60px;
+	background: red;
+	cursor: pointer;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+	margin-left: 210px;
+	/*margin-top: 10px;*/
+	border-radius:4px;
+	opacity:.7;
 }
 
 .smt_tubiao {
@@ -34,7 +83,7 @@
 }
 
 .smt_tubiao1 {
-	width: 800px;
+	width: 780px;
 	height: 360px;
 	margin-top: 20px;
 }
@@ -51,68 +100,178 @@
 	background: #fff;
 }
 
-.smt_rili {
-	overflow: hidden;
-	background: #fff;
-	padding-bottom: 50px;
-	width: 250px;
-	height: 230px;
-	margin: 10px auto;
+
+/****************日历*************/
+
+.smt_right1 {
+	float: right;
+	margin-right: 10px;
+}
+.smt_left1 {
+	float: left;
 }
 
-.smt_rili h3 {
-	font-weight: bold;
+.account-box {
+	background: #fff;
+	overflow: hidden;
+	height: 288px;
+	border: 1px solid #ccc;
+}
+
+.account-title {
+	border-bottom: 2px solid;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.f-btn-fhby {
 	height: 30px;
 	line-height: 30px;
+	color: #f77b10;
+	border: 1px solid #f77b10;
+	font-size: 14px;
+	display: block;
+	width: 85px;
 	text-align: center;
-	font-size: 17px;
-	color: red;
-}
-
-.smt_rili #Header
-/*标题样式*/
-
-{
-	float: left;
-	height: 21px;
-	font-family: "宋体";
-	font-size: 12px;
+	border-radius: 4px;
+	cursor: pointer;
 	margin-top: 10px;
-	margin-left: 80px;
+	margin-left: 20px;
 }
 
-.smt_rili #LDay td
-/*星期的单元格样式*/
-
-{
-	width: 30px;
+.f-btn-jian {
 	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	border-right: 0px;
+	margin-top: 10px;
 	text-align: center;
-	font-family: "宋体";
-	font-size: 12px;
+	width: 20px;
+	background: #ececec;
+	color: #666;
+	border-radius: 4px;
+	position: relative;
+	left: 2px;
+	cursor: pointer;
 }
 
-.smt_rili #LBody td
-/*日期的单元格样式*/
-
-{
-	width: 30px;
+.f-btn-jia {
 	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	border-left: 0px;
+	margin-top: 10px;
 	text-align: center;
-	font-family: "宋体";
-	font-size: 12px;
-	color: #999;
-	font-weight: bold;
+	width: 20px;
+	background: #ececec;
+	color: #666;
+	border-radius: 4px;
+	position: relative;
+	left: -2px;
+	cursor: pointer;
+}
+
+.f-riqi {
+	width: 90px;
+	padding: 0 5px;
+	background: #fff;
+	color: #666;
+	font-size: 14px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	display: block;
+}
+
+.f-rili-table tbody td {
+	background: #fff;
+	position: relative;
+}
+
+.f-rili-table tbody tr {
+	border-bottom: 1px dashed #ccc;
+}
+
+.f-rili-table .f-today {
+	background-color: #faf1de;
+}
+
+.f-rili-table .f-on {
+	background-color: cornflowerblue;
+	color: #fff;
+}
+
+.f-number {
+	cursor: pointer;
+}
+
+.f-rili-table {
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+}
+
+.f-rili-th {
+	float: left;
+	width: 14.25%;
+	text-align: center;
+	line-height: 46px;
+	height: 46px;
+	background-color: #F9EADE;
+	color: #333;
+}
+
+.f-td {
+	border-bottom: 1px dashed #ccc;
+	float: left;
+	width: 14.25%;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+}
+
+.f-yuan {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 13px;
+	left: 50%;
+	margin-left: 10px;
+	background: url(../images/yuan.png) no-repeat center;
+}
+
+.f-table-msg {
+	position: absolute;
+	z-index: 2;
+	top: 34px;
+	left: 50%;
+	margin-left: -120px;
+	width: 280px;
+	background: url(../images/bg-msg.png) no-repeat bottom;
+	line-height: 55px;
+	height: 46px;
+	text-align: center;
+	display: none;
+	color: #666;
 }
 
 
 /**************手风琴***********/
 
 .smt_shou {
-	width: 260px;
-	margin: 20px auto;
-	height: 319px;
+	width: 280px;
+	margin: 10px auto;
+	height: 281px;
 	overflow: auto;
+	border: 1px solid #ccc;
+	position: relative;
+
 }
 
 .smt_shou>h1 {
@@ -120,14 +279,6 @@
 	margin-bottom: 10px;
 	font-size: 18px;
 	font-weight: bold;
-}
-
-.smt_shou::-moz-scrollbar {
-	width: 0.2em;
-}
-
-.smt_shou::-moz-scrollbar:horizontal {
-	height: 0.2em;
 }
 
 
@@ -179,9 +330,8 @@
 	background-repeat: no-repeat
 }
 
-.smt_zi{
+.smt_zi {
 	display: inline-block;
 	width: 120px;
 	height: 30px;
-	
 }

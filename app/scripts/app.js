@@ -19,7 +19,7 @@
         ,templateUrl:'views/homepage.html'
       }).state("mainpath.particulars",{
         //客户详情程璐宇
-        url:'/particulars'
+        url:'/particulars/{id}/{uid}'
         ,templateUrl:'views/particulars.html'
       }).state("mainpath.list",{
         //客户列表薛文凯

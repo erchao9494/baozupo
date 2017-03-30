@@ -1,10 +1,10 @@
-/*程露裕--请大家注意 css 命名,加上前缀*/
-
+﻿/*程露裕--请大家注意 css 命名,加上前缀*/
 .fangchan{
 	width:100%;
 	overflow: hidden;
 	background:#F2F2F2;
-
+	padding-bottom: 13px;
+	
 }
 .fangchan h1{
 	width:100%;
@@ -19,11 +19,11 @@
 }
 .cly{
 	width:97%;
-
+	
 	background:#fff;
 	margin:18px auto;
 	overflow: hidden;
-
+	
 }
 .cly nav{
 	width:100%;
@@ -53,14 +53,14 @@
  border-left:1px solid #F2F2F2;
 }
 .cly_right{
-
+	
 	float:right;
 	height:62px;
 	width:30%;
 }
 .cly_right li{
 	float:left;
-	width:50%;
+	width:100%;
 	height:62px;
 	line-height:62px;
 	text-align: center;
@@ -70,20 +70,20 @@
 	width:65%;
 	height:30px;
 	line-height:30px;
-	background:#5687E7;
-	color:#fff;
+	background:blueviolet;
+	color:#FFF;
 	border-radius:5px;
 	font-size:14px;
 	font-family:"agency fb";
 	font-weight:bold;
-
+	
 }
 .cly_zhu{
 	width:100%;
 	padding:20px;
 	background:#fff;
 	display:inline-block;
-
+	
 }
 
 .cly_zhu div:nth-child(1){
@@ -113,11 +113,11 @@
 	width:80%;
 	height:30px;
 	margin-top:8px;
-
+	
 }
 .cly_zhu div:nth-child(3)>ul{
 	height:30px;
-
+	
 }
 .cly_zhu div:nth-child(3)>ul li{
 	float:left;
@@ -134,8 +134,9 @@
 }
 .cly_zhi{
 	width:100%;
+	height:300px;
 	padding:0 20px;
-
+	
 }
 .cly_zhi>ul>li{
 	width:19%;
@@ -149,7 +150,7 @@
 }
 .cly_zhi>ul>li:nth-child(5n){
 	margin-right:0;
-
+	
 }
 .cly_zhi>ul>li>a{
 	display:inline-block;
@@ -160,54 +161,12 @@
 	text-decoration:none;
 	padding:5px;
 	}
-
-.cly_zhi>ul li a:hover{
-	background:#999999;
-}
-
-
-
-.cly_zhi>ul li a div:nth-child(1) em{
-	position:relative;
-
-}
-.cly_zhi>ul li a div:nth-child(1) em ul{
-	position:absolute;
-	top:15px;
-	right:-6px;
-	width:60px;
-	background:#fff;
-
-}
-.cly_zhi>ul li a div:nth-child(1) em ul li{
-	height:25px;
-	line-height:25px;
-	text-align: center;
-	width:100%;
-  	font-size:12px;
-	color:#5687E7;
-	border-bottom: 1px dashed #ccc;
-}
-.cly_zhi>ul li a div:nth-child(1) em ul li:hover{
-	background:#F5F5F5;
-	color:#0F0F0F;
-}
-.cly_zhi>ul li a div:nth-child(1) em ul li:last-child{
-	border: 0;
-}
-.cly_zhi>ul li a:hover div:nth-child(1) em{
-	display:block;
-}
-.cly_zhi>ul li a div:nth-child(1) em{
-	float:right;
-	margin-right:8px;
-	font-size:15px;
-	margin-top:5px;
-	display:none;
+.cly_zhi>ul>li>a:hover{
+	background:#999999;	
+	
 }
 
 .cly_zhi>ul>li>a>div:nth-child(1){
-
 	color:#fff;
 	height:20px;
 	font-size:16px;
@@ -215,13 +174,13 @@
 	font-family:"agency fb";
 	font-weight:bold;
 	color:#fff;
-
+	
 }
 .cly_zhi>ul>li>a>div:nth-child(2){
 	width:60px;
 	height:60px;
 	margin:0 auto;
-
+	
 }
 .cly_zhi>ul>li>a>div:nth-child(2) img{
 	border-radius:50%;
@@ -283,7 +242,7 @@
 /*浮成*/
 .zwb_bigbox {
 	width: 100%;
-	height: 100%;
+	height:662px;
 	background: rgba(0,0,0,0.5);
 	position: absolute;
 	top: 0;
@@ -622,9 +581,18 @@
 	margin-right:10px;
 	font-weight:normal;
 	color: #01BA9B;
+	
+} 
 
+.red{
+	background:#789FEB !important;
 }
-
+.none{
+	display:none;
+}
+.block{
+	display:block;
+}
 
 
 

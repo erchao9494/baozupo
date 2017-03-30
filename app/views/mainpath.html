@@ -9,10 +9,11 @@
     <!--header start-->
     <div class="lzk_header clearFix">
       <div class="lzk_logo left" style="text-align:center">
-        Login
+        <img src="../images/home.png">
       </div>
       <div class="lzk_username right" style="text-align:center">
-        userName
+        <div class="lzk_username_img"><img src="{{lzk_arr.img}}" alt=""></div>
+        <span>{{lzk_arr.name}}</span>
       </div>
     </div>
     <!--header end-->
@@ -20,12 +21,12 @@
     <div class="lzk_main clearFix">
       <div class="lzk_sidebar left" id="lzk_sideba">
         <ul class="lzk_ul">
-          <li><a ui-sref="mainpath.homepage">宋明唐</a></li>
-          <li><a ui-sref="mainpath.particulars">陈雨露</a></li>
-          <li><a ui-sref="mainpath.list">薛文凯</a></li>
-          <li><a ui-sref="mainpath.occupancy">赵万宝</a></li>
-          <li><a ui-sref="mainpath.remain">余含水</a></li>
-          <li><a ui-sref="mainpath.addition">李志锴</a></li>
+          <li><a ui-sref="mainpath.homepage">首页</a></li>
+          <li><a ui-sref="mainpath.particulars">房产</a></li>
+          <li><a ui-sref="mainpath.list">租客列表</a></li>
+          <li><a ui-sref="mainpath.occupancy">个人设置</a></li>
+          <!--<li><a ui-sref="mainpath.remain">余含水</a></li>-->
+          <li><a ui-sref="mainpath.addition">到期房</a></li>
         </ul>
       </div>
       <div class="lzk_app">

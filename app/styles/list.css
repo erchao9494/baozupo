@@ -1,15 +1,12 @@
-/*薛文凯--请大家注意 css 命名,加上前缀*/
+﻿/*薛文凯--请大家注意 css 命名,加上前缀*/
 
-.xwk_main {
+.yhss_main {
 	width: 100%;
 	background: #F2F2F2;
-	height: 100vh;
-	overflow: hidden;
-	background: #FFFFFF;
 	font-family: "微软雅黑";
 }
 
-.xwk_nav {
+.yhss_nav {
 	width: 100%;
 	height: 60px;
 	line-height: 60px;
@@ -17,46 +14,47 @@
 	background: #FFFFFF;
 }
 
-.xwk_nav li:first-child a {
+.yhss_nav li:first-child a {
 	font-weight: normal;
 	color: #000000;
 }
 
-.xwk_nav li {
+.yhss_nav li {
 	color: #666666;
 	margin-left: 20px;
 	display: inline-block;
 	font-weight: bold;
 }
 
-.xwk_nav li:last-child a {
+.yhss_nav li:last-child a {
 	font-weight: bold;
 	color: #999999;
 	font-size: 16px;
 }
 
-.xwk_adduser {
+.yhss_adduser {
 	width: 96%;
-	height: 100vh;
+	overflow: hidden;
 	margin: 0 auto;
 	background: #FFFFFF;
 	margin-top: 10px;
+	min-height: 480px;
 }
 
-.xwk_list {
+.yhss_list {
 	width: 100%;
 	height: 60px;
 	border-bottom: 1px solid #E7EAEC;
 }
 
-.xwk_roomlist {
+.yhss_roomlist {
 	width: 150px;
 	height: 100%;
 	margin-left: 10px;
 	float: left;
 }
 
-.xwk_roomlist .xwk_roomnumer {
+.yhss_roomlist .yhss_roomnumer {
 	width: 100%;
 	height: 18px;
 	font-size: 18px;
@@ -66,7 +64,7 @@
 	margin-top: 15px;
 }
 
-.xwk_roomlist .xwk_roomnumer p {
+.yhss_roomlist .yhss_roomnumer p {
 	float: right;
 	margin-right: 20px;
 	font-size: 12px;
@@ -76,7 +74,7 @@
 	margin-top: 6px;
 }
 
-.xwk_roomlist .xwk_roomstyle {
+.yhss_roomlist .yhss_roomstyle {
 	width: 100%;
 	height: 12px;
 	font-size: 12px;
@@ -86,7 +84,7 @@
 	color: #888888;
 }
 
-.xwk_btn {
+.yhss_btn {
 	width: 100px;
 	font-family: "微软雅黑";
 	float: right;
@@ -94,11 +92,11 @@
 	margin-right: 10px;
 }
 
-.xwk_btn:active {
+.yhss_btn:active {
 	transition: 1s;
 }
 
-.xwk_back {
+.yhss_back {
 	width: 100px;
 	font-family: "微软雅黑";
 	float: right;
@@ -106,14 +104,14 @@
 	margin-right: 15px;
 }
 
-.xwk_hint {
+.yhss_hint {
 	width: 100%;
 	height: 190px;
 	margin-top: 165px;
 	display: block;
 }
 
-.xwk_hint p:first-child {
+.yhss_hint p:first-child {
 	font-size: 120px;
 	width: 100%;
 	color: #CCCCCC;
@@ -122,12 +120,12 @@
 	text-align: center;
 }
 
-.xwk_hint p:first-child i {
+.yhss_hint p:first-child i {
 	display: block;
 	margin-left: -25px;
 }
 
-.xwk_hint p:nth-child(2) {
+.yhss_hint p:nth-child(2) {
 	text-align: center;
 	width: 100%;
 	font-size: 18px;
@@ -136,7 +134,7 @@
 	margin-top: 20px;
 }
 
-.xwk_hint p:nth-child(3) {
+.yhss_hint p:nth-child(3) {
 	text-align: center;
 	width: 100%;
 	font-size: 14px;
@@ -148,10 +146,8 @@
 
 /*浮层*/
 
-
-/*余含水--请大家注意 css 命名,加上前缀*/
-
-.xwk_bigbox {
+/*详情*/
+.yhs_xq{
 	width: 100%;
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.5);
@@ -161,15 +157,72 @@
 	z-index: 1;
 	display: none;
 }
-
-.xwk_bj {
-	width: 400px;
+.yhs_xqy{
+	width: 500px;
 	height: 546px;
 	position: relative;
-.xwk_bj {
-	width: 400px;
-	height: 546px;
+	top: 5%;
+	left: 50%;
+	margin-left: -200px;
+	background: #FFFFFF;
+	z-index: 3;
+}
+.yhs_xa{
+	width: 100%;
+	height: 400px;
+	overflow: auto;
+}
+.yhs_xa ul li{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	line-height: 45px;
+	border-bottom: 1px dashed #999999;
+	text-indent: 48px;
+}
+..yhs_xa ul li span{
+	display: inline-block;
+	text-indent: 60px;
+	width: 100px;background: red;
+}
+/*余含水--请大家注意 css 命名,加上前缀*/
+
+.yhss_bigbox {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
+}
+.yhs_jg{
+	width: 100%;
+	height: 36px;
+	float: left;
+	border-bottom: 1px dashed #E7EAEC;
+	line-height: 34px;
+	text-indent: 25px;
+}
+.yhs_jg span{
+	float: left;
+}
+
+.yhs_jg input {
+	width: 270px;
+	height: 30px;
+	border: 1px solid #A7B5BC;
+	margin-left: 45px;
+	float: left;
+	margin-top: 3px;
+}
+
+
+.yhss_bj {
+	width: 500px;
+	height: 546px;
+	position: relative;
 	top: 5%;
 	left: 50%;
 	margin-left: -200px;
@@ -177,14 +230,13 @@
 	z-index: 2;
 }
 
-.xwk_bj button,
+.yhss_bj button,
 select,
 input {
 	-font-family: "微软雅黑";
-	display: none;
 }
 
-.xwk_div {
+.yhss_div {
 	width: 100%;
 	height: 42px;
 	border-bottom: 1px solid #EEEEEE;
@@ -192,22 +244,22 @@ input {
 	font-size: 16px;
 }
 
-.xwk_div p {
+.yhss_div p {
 	float: left;
 	text-indent: 10px;
 }
 
-.xwk_div span {
+.yhss_div span {
 	float: right;
 	margin-right: 10px;
 	cursor: pointer;
 }
 
-.xwk_div span:hover {
+.yhss_div span:hover {
 	color: #666;
 }
 
-.xwk_next {
+.yhss_next {
 	width: 100%;
 	height: 54px;
 	position: absolute;
@@ -216,19 +268,19 @@ input {
 	padding: 10px 0;
 }
 
-.xwk_next button {
+.yhss_next button {
 	width: 120px;
 	margin: 0 auto;
 	display: block;
 }
 
-.xwk_form {
+.yhss_form {
 	width: 100%;
 	height: 448px;
 	overflow: auto;
 }
 
-.xwk_name {
+.yhss_name {
 	width: 100%;
 	height: 36px;
 	float: left;
@@ -237,11 +289,11 @@ input {
 	text-indent: 25px;
 }
 
-.xwk_name span {
+.yhss_name span {
 	float: left;
 }
 
-.xwk_name input {
+.yhss_name input {
 	width: 270px;
 	height: 30px;
 	border: 1px solid #A7B5BC;
@@ -250,7 +302,7 @@ input {
 	margin-top: 3px;
 }
 
-.xwk_tel {
+.yhss_tel {
 	width: 100%;
 	height: 36px;
 	float: left;
@@ -259,11 +311,11 @@ input {
 	text-indent: 25px;
 }
 
-.xwk_tel span {
+.yhss_tel span {
 	float: left;
 }
 
-.xwk_tel input {
+.yhss_tel input {
 	width: 270px;
 	height: 30px;
 	border: 1px solid #A7B5BC;
@@ -272,7 +324,7 @@ input {
 	margin-top: 3px;
 }
 
-.xwk_tels {
+.yhss_tels {
 	width: 100%;
 	height: 36px;
 	float: left;
@@ -281,11 +333,11 @@ input {
 	text-indent: 25px;
 }
 
-.xwk_tels span {
+.yhss_tels span {
 	float: left;
 }
 
-.xwk_tels input {
+.yhss_tels input {
 	width: 270px;
 	height: 30px;
 	border: 1px solid #A7B5BC;
@@ -294,7 +346,7 @@ input {
 	margin-top: 3px;
 }
 
-.xwk_address {
+.yhss_address {
 	width: 100%;
 	height: 36px;
 	float: left;
@@ -303,11 +355,11 @@ input {
 	text-indent: 17px;
 }
 
-.xwk_address span {
+.yhss_address span {
 	float: left;
 }
 
-.xwk_address input {
+.yhss_address input {
 	width: 270px;
 	height: 30px;
 	border: 1px solid #A7B5BC;
@@ -316,15 +368,7 @@ input {
 	margin-top: 3px;
 }
 
-.xwk_address select{
-	width: 94px;
-	float: left;
-	height: 30px;
-	margin-top: 3px;
-	margin-left: 5px;
-	text-align: center;
-}
-.xwk_start {
+.yhss_start {
 	width: 100%;
 	height: 36px;
 	float: left;
@@ -333,11 +377,11 @@ input {
 	text-indent: 25px;
 }
 
-.xwk_start span {
+.yhss_start span {
 	float: left;
 }
 
-.xwk_start input {
+.yhss_start input {
 	width: 270px;
 	height: 30px;
 	border: 1px solid #A7B5BC;
@@ -346,7 +390,7 @@ input {
 	margin-top: 3px;
 }
 
-.xwk_end {
+.yhss_end {
 	width: 100%;
 	height: 36px;
 	float: left;
@@ -355,11 +399,11 @@ input {
 	text-indent: 25px;
 }
 
-.xwk_end span {
+.yhss_end span {
 	float: left;
 }
 
-.xwk_end input {
+.yhss_end input {
 	width: 270px;
 	height: 30px;
 	border: 1px solid #A7B5BC;
@@ -368,48 +412,49 @@ input {
 	margin-top: 3px;
 }
 
-.xwk_peoplenum {
+.yhss_peoplenum {
 	width: 100%;
 	height: 48px;
 	float: left;
 	border-bottom: 1px dashed #E7EAEC;
 	line-height: 48px;
-	text-indent: 35px;
+	text-indent: 20px;
 }
 
-.xwk_peoplenum .xwk_span {
-	float: left;
+.yhss_peoplenum .yhss_span {
+	/*float: left;*/
 }
 
-.xwk_bar {
+.yhss_bar {
 	width: 100%;
 	height: 100px;
 }
 
-.xwk_bar span {
+.yhss_bar span {
 	float: left;
 	margin-left: 35px;
 	margin-top: 15px;
 }
 
-.xwk_bar textarea {
+.yhss_bar textarea {
 	float: left;
 	margin-left: 35px;
 	margin-top: 10px;
 }
-/*哈哈哈哈哈哈哈哈 找回来啦*/
-.xwk_usermain {
+
+
+
+.yhss_usermain{
 	width: 230px;
-	height: 263px;
+	height:360px;
 	margin: 10px 0 0 10px;
 	border: 1px solid #999999;
 	border-radius: 1%;
 	background: #FAFAFA;
-	margin: 50px auto;
-	display: none;
+	float: left;
+	
 }
-
-.xwk_usermain p {
+.yhss_usermain p{
 	width: 100%;
 	height: 46px;
 	line-height: 46px;
@@ -420,8 +465,7 @@ input {
 	color: #9D9D9D;
 	text-indent: 10px;
 }
-
-.xwk_usermain p a {
+.yhss_usermain p a{
 	display: block;
 	float: right;
 	height: 100%;
@@ -430,15 +474,14 @@ input {
 	margin-right: 10px;
 }
 
-.xwk_usermain ul {
+.yhss_usermain ul{
 	width: 100%;
-	height: 150px;
+	height: 245px;
 	float: left;
 	display: block;
 	background: #FFFFFF;
 }
-
-.xwk_usermain ul li {
+.yhss_usermain ul li{
 	width: 100%;
 	height: 30px;
 	line-height: 30px;
@@ -448,13 +491,202 @@ input {
 	font-size: 12px;
 	color: #999999;
 }
-
-.xwk_usermain div {
+.yhss_usermain div{
 	width: 100%;
 	height: 65px;
 	float: left;
 	border-top: 1px solid #999999;
 	text-align: center;
-	line-height: 65px;
+	
+}
+.yhs_rq{
+	display: inline-block;
+	width: 270px;
+	height: 30px;
+	border: 1px solid #999999;
+	margin-left: 20px;
+	color: #999999;
+	border-radius: 5px;
+	margin-top: 1px;line-height: -30px;
+}
+.btn{
+	margin-top: 10px;
+}
+.yhs_xiugai{
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
+}
+.yhs_xg{
+	width: 500px;
+	height: 380px;
+	position: relative;
+	top: 5%;
+	left: 50%;
+	margin-left: -200px;
+	background: #FFFFFF;
+	z-index: 2;
+}
+.yhs_xgform {
+	width: 100%;
+	height: 448px;
+	overflow: auto;
+}
+.yhss_xgname{
+	width: 100%;
+	height: 36px;
+	float: left;
+	border-bottom: 1px dashed #E7EAEC;
+	line-height: 34px;
+	text-indent: 25px;
+}
+.yhss_xgname span {
+	float: left;
+}
+.yhss_xgname input {
+	width: 270px;
+	height: 30px;
+	border: 1px solid #A7B5BC;
+	margin-left: 20px;
+	float: left;
+	margin-top: 3px;
 }
 
+.yhss_xgtel {
+	width: 100%;
+	height: 36px;
+	float: left;
+	border-bottom: 1px dashed #E7EAEC;
+	line-height: 34px;
+	text-indent: 25px;
+}
+
+.yhss_xgtel span {
+	float: left;
+}
+
+.yhss_xgtel input {
+	width: 270px;
+	height: 30px;
+	border: 1px solid #A7B5BC;
+	margin-left: 20px;
+	float: left;
+	margin-top: 3px;
+}
+.yhss_xgtels {
+	width: 100%;
+	height: 36px;
+	float: left;
+	border-bottom: 1px dashed #E7EAEC;
+	line-height: 34px;
+	text-indent: 25px;
+}
+
+.yhss_xgtels span {
+	float: left;
+}
+
+.yhss_xgtels input {
+	width: 270px;
+	height: 30px;
+	border: 1px solid #A7B5BC;
+	margin-left: 20px;
+	float: left;
+	margin-top: 3px;
+}
+.yhss_xgaddress {
+	width: 100%;
+	height: 36px;
+	float: left;
+	border-bottom: 1px dashed #E7EAEC;
+	line-height: 34px;
+	text-indent: 17px;
+}
+
+.yhss_xgaddress span {
+	float: left;
+}
+
+.yhss_xgaddress input {
+	width: 270px;
+	height: 30px;
+	border: 1px solid #A7B5BC;
+	margin-left: 13px;
+	float: left;
+	margin-top: 3px;
+}
+
+.yhss_xgend {
+	width: 100%;
+	height: 36px;
+	float: left;
+	border-bottom: 1px dashed #E7EAEC;
+	line-height: 34px;
+	text-indent: 25px;
+}
+
+.yhss_xgend span {
+	float: left;
+}
+
+.yhss_xgend input {
+	width: 270px;
+	height: 30px;
+	border: 1px solid #A7B5BC;
+	margin-left: 20px;
+	float: left;
+	margin-top: 3px;
+}
+
+.yhss_xgpeoplenum {
+	width: 100%;
+	height: 48px;
+	float: left;
+	border-bottom: 1px dashed #E7EAEC;
+	line-height: 48px;
+	text-indent: 35px;
+}
+
+.yhss_xgpeoplenum .yhss_span {
+	/*float: left;*/
+}
+
+.yhss_xgnext {
+	width: 100%;
+	height: 54px;
+	position: absolute;
+	bottom: 0;
+	border-top: 1px solid #DBDBDB;
+	padding: 10px 0;
+}
+
+.yhss_xgnext button {
+	width: 120px;
+	margin: 0 auto;
+	display: block;
+}
+.yhs_xgjg{
+	width: 100%;
+	height: 36px;
+	float: left;
+	border-bottom: 1px dashed #E7EAEC;
+	line-height: 34px;
+	text-indent: 25px;
+}
+.yhs_xgjg span{
+	float: left;
+}
+
+.yhs_xgjg input {
+	width: 270px;
+	height: 30px;
+	border: 1px solid #A7B5BC;
+	margin-left: 45px;
+	float: left;
+	margin-top: 3px;
+}
