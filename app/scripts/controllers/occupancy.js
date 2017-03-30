@@ -15,7 +15,7 @@ angular.module('yeomanApp')
 		}, function() {
 
 		})
-
+		 
 		$scope.xwk_t = false
 		$scope.xwk_title = "密码格式错误"
 		$scope.xwk_ts = false
