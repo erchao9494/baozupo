@@ -11,8 +11,13 @@ Run `grunt` for building and `grunt serve` for preview.
 
 Running `grunt test` will run the unit tests with karma.
 
+``` bash
+# install dependencies
 npm install
 
+# serve with hot reload at localhost:8080
 grunt serve
 
+# build for production with minification
 grunt build
+```
